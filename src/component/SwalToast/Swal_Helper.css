@@ -1,0 +1,27 @@
+.swal_helper_class {
+  border: 0.5px solid rgb(207, 207, 207);
+  padding: 0;
+  display: table;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin-top: 5px;
+}
+/* 
+li {
+  padding: 0px;
+  margin: 0;
+} */
+.swal_helper_class_li {
+  padding: 0;
+}
+.swal_helper_class_li:hover {
+  background-color: rgb(4, 28, 94);
+  color: white;
+}
+
+.swal_helper_class {
+  z-index: 1051 !important; /* override inline or modal styles */
+  position: absolute;
+}

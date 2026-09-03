@@ -1,0 +1,5 @@
+/* In your global CSS file, e.g., styles.css */
+.custom-toast .Toastify__progress-bar {
+  background-color: blue !important;
+  z-index: 99999 !important;
+}

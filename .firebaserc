@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "uat": "uef-cambodia-lecturer",
+    "default": "uef-cambodia-lecturer"
+  },
+  "targets": {},
+  "etags": {}
+}

@@ -1,0 +1,407 @@
+/* ---------- GLOBAL PAGE STYLES ---------- */
+.login-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #f0fdf4;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- SPLIT LAYOUT CONTAINER ---------- */
+.login-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: 100vh;
+  max-height: 820px;
+  background: #ffffff;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+  animation: slideUp 0.8s ease-out;
+}
+
+/* Swapped layout - Login on Left, Image on Right */
+.login-container-swapped {
+  flex-direction: row;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ---------- ANIMATED BUTTON GRADIENT ---------- */
+@keyframes buttonGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ---------- LEFT SECTION (Login Form) ---------- */
+.login-left-form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInLeft 0.8s ease-out 0.2s both;
+  position: relative;
+  background: #ffffff;
+  padding: 1.5rem;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ---------- RIGHT SECTION (University Image) ---------- */
+.login-right-image {
+  flex: 0 0 50%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.login-right-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(255, 255, 255, 0.12) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 255, 255, 0.06) 0%,
+      transparent 50%
+    );
+  z-index: 1;
+}
+
+.login-left-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-left-content .university-icon {
+  font-size: 85px;
+  margin-bottom: 1.5rem;
+  display: block;
+  animation: floatIcon 4s ease-in-out infinite;
+  filter: drop-shadow(0 8px 30px rgba(0, 0, 0, 0.25));
+}
+
+@keyframes floatIcon {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) scale(1.02);
+  }
+}
+
+/* Decorative shapes on right side */
+.login-right-image .shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  z-index: 0;
+  backdrop-filter: blur(2px);
+}
+
+.login-right-image .shape-1 {
+  width: 350px;
+  height: 350px;
+  top: -120px;
+  right: -120px;
+  animation: floatShape 10s ease-in-out infinite;
+}
+
+.login-right-image .shape-2 {
+  width: 250px;
+  height: 250px;
+  bottom: -80px;
+  left: -80px;
+  animation: floatShape 8s ease-in-out infinite 1s;
+}
+
+.login-right-image .shape-3 {
+  width: 180px;
+  height: 180px;
+  top: 50%;
+  right: 10px;
+  animation: floatShape 12s ease-in-out infinite 2s;
+}
+
+@keyframes floatShape {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(25px, -25px) scale(1.1);
+  }
+  66% {
+    transform: translate(-15px, 15px) scale(0.9);
+  }
+}
+
+/* ---------- CENTERED LOGIN CARD ---------- */
+.login-center-wrapper {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+}
+
+.login-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 0.5rem 0rem 1rem 0rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+.login-content {
+  width: 100%;
+}
+
+/* ---------- INPUT FIELDS (Modern Green Theme) ---------- */
+.form-control,
+.custom-input {
+  border-radius: 14px !important;
+  border: 2px solid #e8f0e8;
+  transition: all 0.3s ease;
+  padding: 14px 18px;
+  font-size: 14px;
+  background: #f9fbf9;
+  color: #1a2e1a;
+}
+
+.form-control:focus,
+.custom-input:focus {
+  border-color: #059669;
+  box-shadow: 0 0 0 5px rgba(5, 150, 105, 0.12);
+  background: #ffffff;
+}
+
+.form-control::placeholder,
+.custom-input::placeholder {
+  color: #a0b8a0;
+}
+
+/* ---------- BUTTON (Modern Green Theme) ---------- */
+.btn-primary {
+  border-radius: 50px !important;
+  border: none;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 60%
+  );
+  animation: shimmer 3s infinite;
+  transform: translateX(-100%);
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(100%) skewX(-20deg);
+  }
+}
+
+/* ---------- TEXT STYLES ---------- */
+.moul-regular {
+  font-weight: 600;
+}
+
+/* ---------- FIXED FOOTER (Below Login Card) ---------- */
+.login-footer-text {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  color: #8a9a8a;
+  font-size: 0.75rem;
+  line-height: 1.8;
+}
+
+.login-footer-text span {
+  display: inline-block;
+}
+
+/* ---------- RESPONSIVE ADJUSTMENTS ---------- */
+@media (max-width: 992px) {
+  .login-container {
+    flex-direction: column;
+    max-height: none;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .login-container-swapped {
+    flex-direction: column;
+  }
+
+  .login-right-image {
+    flex: 0 0 30%;
+    padding: 1.5rem;
+    order: -1;
+  }
+
+  .login-left-form {
+    flex: 1;
+    padding: 0.5rem;
+    order: 2;
+  }
+
+  .login-right-image .university-icon {
+    font-size: 50px;
+    margin-bottom: 0.5rem;
+  }
+
+  .login-right-image h6 {
+    font-size: 1rem !important;
+  }
+
+  .login-card {
+    padding: 0.5rem 0;
+  }
+
+  .login-card img {
+    height: 130px !important;
+    width: 130px !important;
+  }
+
+  .login-footer-text {
+    font-size: 0.7rem;
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-right-image {
+    display: none;
+  }
+
+  .login-left-form {
+    padding: 0.5rem;
+  }
+
+  .login-card {
+    padding: 0.5rem 0;
+  }
+
+  .login-card img {
+    height: 140px !important;
+    width: 140px !important;
+  }
+
+  .btn-primary {
+    height: 50px !important;
+  }
+
+  .login-footer-text {
+    font-size: 0.6rem;
+    margin-top: 0.75rem;
+    padding-top: 0.5rem;
+  }
+}
+
+/* ---------- SCROLLBAR STYLING ---------- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #059669;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #047857;
+}
+
+
+/* Spinner animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

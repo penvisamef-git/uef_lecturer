@@ -1,0 +1,27 @@
+.date-picker-full {
+  width: 100%;
+  border-style: none;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.react-date-picker__wrapper {
+  width: 100%;
+  border: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.react-date-picker__inputGroup__input {
+  background: transparent !important;
+  border: none !important;
+  color: #333;
+}
+
+/* .date-picker-wrapper  {
+  height: 300px;
+} */
+
+.fixed-calendar {
+  width: 350px;
+}

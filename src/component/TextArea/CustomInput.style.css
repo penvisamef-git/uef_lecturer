@@ -1,0 +1,10 @@
+.holder-custom-input {
+  margin-top: 15px;
+}
+
+.holder-custom-input .holder-error {
+  width: 100%;
+  text-align: left;
+  color: red;
+
+}

@@ -1,0 +1,87 @@
+.custom-table .table-data-pagination-holder {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.custom-table .table-data-pagination-holder .result {
+  color: gray;
+}
+
+.custom-table .table-data-pagination-holder .btn-group .btn {
+  display: flex;
+  border-width: 1px;
+  border-color: rgb(227, 228, 228);
+  border-radius: 0;
+}
+
+.custom-table .holder-header {
+  margin-bottom: 15px;
+}
+.custom-table .holder-header input {
+  border-radius: 6px;
+  border-color: lightgray;
+  border-width: 0.5px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.custom-table .holder-header .holder-show {
+  margin-top: 10px;
+  display: flex;
+  justify-content: right;
+}
+
+.custom-table .holder-header .holder-show label {
+  margin-top: 5px;
+}
+.custom-table .holder-header .holder-show select {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.custom-table .holder-header .holder-show button {
+  margin-left: 20px;
+  width: 80px;
+}
+
+.custom-table .data-table-button {
+  display: flex;
+  width: 130px;
+  justify-content: center;
+}
+
+.custom-table .data-table-button a{
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+.custom-table .data-table-button .icon {
+  font-size: 15px;
+  margin-right: 3px;
+}
+
+.custom-table .status-label-active {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.252);
+  width: 100%;
+  padding: 5px;
+  border-radius: 12px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.custom-table .status-label-deactive {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.249);
+  width: 100%;
+  padding: 5px;
+  border-radius: 12px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.custom-table {
+  margin-top: -10px;
+}

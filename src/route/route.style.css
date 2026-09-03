@@ -1,0 +1,614 @@
+/* ==========================================
+   MODERN 2026 DASHBOARD STYLES
+   ========================================== */
+
+/* ---------- GLOBAL ---------- */
+:root {
+  --primary-green: #0dc25e;
+  --primary-green-dark: #02a33d;
+  --primary-green-deep: #004a0f;
+  --text-dark: #1a3c2a;
+  --text-gray: #6b7280;
+  --bg-white: #ffffff;
+  --bg-smoke: #f8f9fa;
+  --bg-milk: #fdfcf8;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.1);
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------- DASHBOARD CONTAINER ---------- */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg-smoke);
+}
+
+/* ==========================================
+   HEADER
+   ========================================== */
+.dashboard-header {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-width-left, 260px);
+  right: 0;
+  height: 64px;
+  background: var(--bg-white);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.dashboard-header .header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.dashboard-header .header-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Account Dropdown */
+.account-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 6px 12px 6px 6px;
+  border-radius: 50px;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.account-dropdown:hover {
+  background: rgba(13, 194, 94, 0.06);
+  border-color: rgba(13, 194, 94, 0.1);
+}
+
+.account-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-green);
+  background: var(--bg-milk);
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.account-dropdown:hover .profile-img {
+  border-color: var(--primary-green-dark);
+}
+
+.account-labels {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.account-name {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.account-role {
+  font-size: 11px;
+  color: var(--text-gray);
+}
+
+/* Dropdown Menu */
+.dropdown-menus {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 220px;
+  background: var(--bg-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 8px;
+  z-index: 999;
+  animation: dropdownSlide 0.2s ease-out;
+}
+
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.dropdown-menus a,
+.dropdown-menus button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  background: transparent;
+  color: var(--text-dark);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition);
+  font-family: inherit;
+  text-align: left;
+}
+
+.dropdown-menus a:hover,
+.dropdown-menus button:hover {
+  background: rgba(13, 194, 94, 0.08);
+  color: var(--primary-green-dark);
+}
+
+.dropdown-menus .icon {
+  font-size: 18px;
+  color: var(--text-gray);
+  transition: var(--transition);
+}
+
+.dropdown-menus a:hover .icon,
+.dropdown-menus button:hover .icon {
+  color: var(--primary-green-dark);
+}
+
+.dropdown-menus .logout-btn {
+  color: #dc2626;
+}
+
+.dropdown-menus .logout-btn:hover {
+  background: rgba(220, 38, 38, 0.08);
+  color: #dc2626;
+}
+
+.dropdown-menus .logout-btn:hover .icon {
+  color: #dc2626;
+}
+
+/* ==========================================
+   SIDEBAR
+   ========================================== */
+.dashboard-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: var(--sidebar-width, 260px);
+  background: var(--bg-white);
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.06);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(0, 0, 0, 0.06);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.dashboard-sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-header {
+  padding: 20px 16px 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  flex-shrink: 0;
+  text-align: center;
+  background: var(--bg-milk);
+}
+
+.sidebar-header .logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.sidebar-header .logo-wrapper img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+  transition: var(--transition);
+}
+
+.sidebar-header .logo-wrapper .version {
+  font-size: 11px;
+  color: var(--text-gray);
+}
+
+.sidebar-header .brand-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 8px 0 2px;
+  line-height: 1.3;
+}
+
+.sidebar-header .brand-sub {
+  font-size: 12px;
+  color: var(--text-gray);
+}
+
+.sidebar-scroll-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 12px 20px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(13, 194, 94, 0.2) transparent;
+  background: var(--bg-white);
+}
+
+.sidebar-scroll-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-scroll-content::-webkit-scrollbar-thumb {
+  background: rgba(13, 194, 94, 0.2);
+  border-radius: 4px;
+}
+
+/* ==========================================
+   MAIN CONTENT
+   ========================================== */
+.dashboard-main {
+  display: flex;
+  margin-top: 0;
+  margin-left: var(--sidebar-width-content, 260px);
+  min-height: 100vh;
+  overflow: hidden;
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================
+   CONTENT AREA - FULL WIDTH (No Right Sidebar)
+   ========================================== */
+.dashboard-content {
+  flex: 1;
+  position: relative;
+  padding: 20px 40px 80px 24px;
+  overflow-y: auto;
+  min-height: 100vh;
+  background: var(--bg-milk);
+}
+
+/* Bubble Background */
+.dashboard-content .bubble-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.dashboard-content .bubble {
+  position: absolute;
+  bottom: -20px;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(13, 194, 94, 0.06);
+  backdrop-filter: blur(1px);
+  animation: floatAndSway linear infinite;
+  will-change: transform, top;
+}
+
+@keyframes floatAndSway {
+  0% {
+    top: 100%;
+    transform: translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.12;
+  }
+  30% {
+    transform: translateX(3px) rotate(1deg);
+  }
+  60% {
+    transform: translateX(-2px) rotate(-0.5deg);
+  }
+  85% {
+    opacity: 0.06;
+  }
+  100% {
+    top: -20%;
+    transform: translateX(1px) rotate(0.5deg);
+    opacity: 0;
+  }
+}
+
+.dashboard-content .content-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================
+   BREADCRUMB
+   ========================================== */
+.dashboard-breadcrumb {
+  position: fixed;
+  top: 64px;
+  left: var(--sidebar-width, 260px);
+  right: 0;
+  height: 48px;
+  background: var(--bg-white);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  z-index: 50;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.breadcrumb-items {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.breadcrumb-items a {
+  text-decoration: none;
+  color: var(--primary-green-dark);
+  font-weight: 500;
+  transition: var(--transition);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.breadcrumb-items a:hover {
+  background: rgba(13, 194, 94, 0.08);
+  color: var(--primary-green-deep);
+}
+
+.breadcrumb-items span {
+  color: var(--text-gray);
+  font-size: 12px;
+}
+
+.breadcrumb-items .current {
+  color: var(--text-gray);
+  font-weight: 400;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.dashboard-footer {
+  position: fixed;
+  bottom: 0;
+  left: var(--sidebar-width, 260px);
+  right: 0;
+  height: 40px;
+  background: var(--bg-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  z-index: 50;
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 12px;
+  color: var(--text-gray);
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.03);
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 991px) {
+  .dashboard-header {
+    right: 0;
+    height: 56px;
+    padding: 0 16px;
+    left: 0 !important;
+  }
+
+  .dashboard-header .header-title .subtitle {
+    display: none;
+  }
+
+  .dashboard-main {
+    margin-left: 0 !important;
+  }
+
+  .dashboard-content {
+    padding: 20px 40px 60px 16px;
+  }
+
+  .dashboard-breadcrumb {
+    right: 0;
+    top: 56px;
+    padding: 0 16px;
+    left: 0;
+  }
+
+  .dashboard-footer {
+    right: 0;
+    left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .dashboard-sidebar {
+    width: var(--width_content, 280px);
+    left: -100%;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dashboard-sidebar.active {
+    left: 0;
+  }
+
+  .dashboard-sidebar.deactive {
+    left: -100%;
+  }
+
+  .dashboard-header {
+    right: 0;
+    height: 56px;
+    padding: 0 12px;
+  }
+
+  .dashboard-header .header-title {
+    font-size: 13px;
+  }
+
+  .account-labels .account-role {
+    display: none;
+  }
+
+  .dashboard-main {
+    margin-right: 0;
+    margin-left: 0 !important;
+  }
+
+  .dashboard-content {
+    padding: 12px 20px 56px 12px;
+  }
+
+  .dashboard-breadcrumb {
+    right: 0;
+    top: 56px;
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+  .dashboard-footer {
+    right: 0;
+    height: 36px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-content {
+    padding: 12px 16px 52px 12px;
+  }
+}
+
+/* ==========================================
+   LOADING OVERLAY - HIGHEST Z-INDEX
+   ========================================== */
+.loading-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(255, 255, 255, 0.577) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  z-index: 9999999 !important;
+  cursor: wait !important;
+  pointer-events: all !important;
+}
+
+/* ====== 1. SIDEBAR OVERLAY ANIMATION ====== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ====== 2. NOTIFICATION BADGE PULSE ====== */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ====== 3. DARK MODE STYLES ====== */
+.dark-mode .dashboard-header {
+  background-color: #1a1a1a !important;
+  border-bottom: 1px solid #2d2d2d !important;
+}
+
+.dark-mode .dashboard-sidebar {
+  background-color: #1a1a1a !important;
+  border-right: 1px solid #2d2d2d !important;
+}
+
+.dark-mode .menu-item {
+  color: #aaa !important;
+}
+
+.dark-mode .menu-item:hover {
+  background: #2d2d2d !important;
+  color: #10b981 !important;
+}
+
+.dark-mode .dropdown-menus {
+  background: #2d2d2d !important;
+  border: 1px solid #444 !important;
+}
+
+.dark-mode .dropdown-menus a,
+.dark-mode .dropdown-menus button {
+  color: #fff !important;
+}
+
+.dark-mode .dropdown-menus a:hover,
+.dark-mode .dropdown-menus button:hover {
+  background: #3d3d3d !important;
+}
+
+/* ====== 3. BREADCRUMB DARK MODE ====== */
+.dark-mode .dashboard-breadcrumb {
+  background-color: #1a1a1a !important;
+  border-top: 1px solid #2d2d2d !important;
+}
+
+.dark-mode .dashboard-footer {
+  background-color: #1a1a1a !important;
+  border-top: 1px solid #2d2d2d !important;
+}

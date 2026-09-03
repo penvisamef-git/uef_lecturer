@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Khmer&family=Moul&family=Noto+Serif+Khmer:wdth,wght@82.1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Khmer&family=Moul&family=Noto+Serif+Khmer:wdth,wght@82.1,100..900&family=Siemreap&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Khmer&family=Moul&family=Noto+Serif+Khmer:wdth,wght@82.1,100..900&family=Siemreap&display=swap");
+
+.moul-regular {
+  font-family: "Moul", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.siemreap-regular {
+  font-family: "Siemreap", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.siemreap-regular-input {
+  font-family: "Siemreap";
+  line-height: 1.8;
+}
+
+.siemreap-bold {
+  font-family: "Siemreap", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.battambang-thin {
+  font-family: "Battambang", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.battambang-light {
+  font-family: "Battambang", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.battambang-regular {
+  font-family: "Battambang", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.battambang-bold {
+  font-family: "Battambang", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.battambang-black {
+  font-family: "Battambang", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.defualt_White_Shadow_Theme {
+  margin-top: 10px;
+  padding-bottom: 15px;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  background-color: white;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.3); /* All sides */
+  border-radius: 6px;
+}
+
+.defualt_White_Shadow_Theme_2 {
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  background-color: white;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.3); /* All sides */
+  border-radius: 0px;
+}
+
+/* Defualt */
+body {
+  font-family: "Siemreap", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  background-color: white;
+}
+
+label {
+  font-family: "Siemreap", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+h4 {
+  font-family: "Siemreap", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+h5 {
+  font-family: "Siemreap", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+h6 {
+  font-family: "Siemreap", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+input {
+  font-family: "Siemreap", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+button {
+  font-family: "Siemreap", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+p {
+  font-family: "Siemreap", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.btn {
+  font-family: "Siemreap", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+/* SweetAlert2 Khmer Font */
+.swal-khmer-font {
+  font-family: 'KhmerOS', 'Siemreap', 'Moul', 'Battambang', 'Khmer', sans-serif !important;
+}
+
+.swal-khmer-font .swal2-title {
+  font-family: 'KhmerOS', 'Siemreap', 'Moul', 'Battambang', 'Khmer', sans-serif !important;
+  font-weight: bold;
+}
+
+.swal-khmer-font .swal2-html-container {
+  font-family: 'KhmerOS', 'Siemreap', 'Moul', 'Battambang', 'Khmer', sans-serif !important;
+}
+
+.swal-khmer-font .swal2-confirm,
+.swal-khmer-font .swal2-cancel {
+  font-family: 'KhmerOS', 'Siemreap', 'Moul', 'Battambang', 'Khmer', sans-serif !important;
+}

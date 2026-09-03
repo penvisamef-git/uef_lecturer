@@ -1,0 +1,20 @@
+/* .main-container-select {
+  position: relative;
+} */
+
+.simple-select-main select:focus {
+  outline-style: none;
+  box-shadow: none;
+}
+
+.simple-select-main select {
+  background-color: rgb(232, 232, 232);
+  padding: 10px;
+  border-radius: 6px;
+  padding-left: 3px;
+  width: 100%;
+}
+
+.simple-select-main .select {
+  background-color: red;
+}

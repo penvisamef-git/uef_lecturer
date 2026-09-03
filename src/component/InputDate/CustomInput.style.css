@@ -1,0 +1,21 @@
+.holder-custom-input {
+  margin-top: 15px;
+}
+
+.holder-custom-input .holder-error {
+  width: 100%;
+  text-align: left;
+  color: red;
+}
+
+/* Hide the browser’s default "dd/mm/yyyy" style text in date inputs (Chrome/Safari) */
+/* Make the placeholder (empty input) text transparent */
+input[type="date"]::-webkit-datetime-edit {
+  color: transparent;
+}
+
+/* When the field is focused OR has a value, show black text */
+input[type="date"]:focus::-webkit-datetime-edit,
+input[type="date"]:not(:placeholder-shown)::-webkit-datetime-edit {
+  color: black;
+}

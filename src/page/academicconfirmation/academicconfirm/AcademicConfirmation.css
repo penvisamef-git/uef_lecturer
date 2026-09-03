@@ -1,0 +1,30 @@
+.academic-confirmation-content {
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.academic-confirmation-content .header-line {
+  border-bottom: 2px solid #1a3c2a;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+@media print {
+  .academic-confirmation-content {
+    padding: 20px;
+  }
+  
+  .academic-confirmation-content .container {
+    box-shadow: none !important;
+  }
+}
+
+/* Ensure proper rendering for PDF */
+.academic-confirmation-content * {
+  box-sizing: border-box;
+}
+
+.academic-confirmation-content img {
+  max-width: 100%;
+  height: auto;
+}
